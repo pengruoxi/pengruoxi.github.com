@@ -75,7 +75,7 @@ section {
     margin-bottom: 20px;
 }
 
-article {
+.journal {
     padding:40px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -83,7 +83,6 @@ article {
 }
 
 a {
-    padding: 5px;
     color:rgb(47, 47, 73);
 }
 
@@ -91,8 +90,17 @@ a:hover{
     color:rgb(67, 67, 245);
 }
 
+footer a{
+    padding: 5px;
+}
+
 h2 {
-    font-size: 15px;
+    font-size: 30px;
+}
+
+p{
+    width: 500px;
+    line-height: 1.5em;
 }
 
 footer {
