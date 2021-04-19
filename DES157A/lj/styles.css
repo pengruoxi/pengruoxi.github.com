@@ -55,15 +55,13 @@ body {
     font-size: 12px;
 }
 
-section {
+main {
     margin: 40px;
 }
 
-.date {
-    display: flex;
-}
 
-.date div{
+.circle{
+    position: absolute;
     width:15px;
     height:15px;
     margin-right: 5px;
@@ -71,11 +69,13 @@ section {
     background-color: rgb(47, 47, 73);
 }
 
-.date time{
+time{
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
-.journal {
+
+article {
     padding:40px;
     padding-top: 20px;
     padding-bottom: 20px;
