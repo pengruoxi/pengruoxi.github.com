@@ -2,33 +2,51 @@
 <html>
 
 <head>
-    <meta charset="HTF-8">
+    <meta charset="UTF-8">
     <title>Experiment 2</title>
 </head>
 
 <body>
     <h1>Experiment 2</h1>
-    <h2>Open a new window in Chrome, right click on the window and choose inspect, and click the console tag to see the code. </h2>
+    <h2>TRPG data generator</h2>
+    <p>Welcome to use TRPG data generator, you can refresh this page to gain your random attributes for creating a TRPG character.</p>
+    <p>The generator is based on Call of Cthulhu 7th edition. To gain more information about this game, please check this <a href="https://en.wikipedia.org/wiki/Call_of_Cthulhu_(role-playing_game)">wiki page</a>.</p>
+    <p>Open a new window in Chrome, right click on the window and choose inspect, and click the console tag to see your random charactor. </p>
 
     <script>
-        //Count number 1 to 100, using "Fizz" to instead number can be devided by 3, 
-        //and "Buzz" to instead number can be devided by 5
-        for(var i=1;i<101;i++){
-            if(i%3==0)
-            {
-                console.log("Fizz");
-            }
-            else if(i%5==0)
-            {
-                console.log("Buzz");
-            }
-            else{
-                console.log(i);
-            }
+        //gaining the username and seed greeting information
+        var greeting = function(){
+            var userName = prompt("Welcome! Please tell me your name.","");
+            console.log(`Hello ${userName}, here is your random character.`)
+        }
+        greeting();
+
+        //function that create random int from min number to max number
+        function randomInt(min, max){
+            return Math.floor( (max - min + 1) * Math.random() ) + min;
         }
 
-        var userName = prompt("What's your name?","");
-    </script>
+        //randomly output one occupation in the default occupation array
+        var occupation = function(){
+            var characterOccupations = ["Accountant","Agency Detective","Antique Dealer","Author","Bartender","Book Dealer","Clergyman","Clerk","Designer","Editor","Film Star","Gangster","Hacker","Journalist","Occultist","Photographer","Policeman","Programmer","Student"];
+            console.log(`Your character's occupation is ${characterOccupations[randomInt(0,characterOccupations.length-1)]}.`);
+
+        }
+        occupation();
+
+        //randomly output data for each attribute based on COC 7th rule for creating character
+        var primaryAttributes = function(){
+            var attribute = ["Strength","Constitution","Dexterity","Size","Intelligence","Power","Appearance","Education"];
+            for(var i=0;i<attribute.length;i++){
+                var data = ( randomInt(1,6)+randomInt(1,6)+randomInt(1,6) )*5;
+                if(i==3 || i==7){
+                    data = ( randomInt(1,6)+randomInt(1,6)+ 6 )*5;
+                }
+                console.log(`${attribute[i]}: ${data}`);
+            }
+        }
+        primaryAttributes();
+   </script>
 </body>
 
 </html>
