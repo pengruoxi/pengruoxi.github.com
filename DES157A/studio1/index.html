@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Studio 1: Mad Libs!</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>TRPG Character Form</h1>
+        <h2>Based on COC 7th</h2>
+    </header>
+
+    <main>
+
+        <img src="">
+        
+        <form id="primaryAttributes">
+            <label for="str">STR</label><input type="text" id="str" required>
+            <label for="con">CON</label><input type="text" id="con" required>
+            <label for="dex">DEX</label><input type="text" id="dex" required>
+            <label for="siz">SIZ</label><input type="text" id="siz" required>
+            <label for="int">INT</label><input type="text" id="int" required>
+            <label for="pow">POW</label><input type="text" id="pow" required>
+            <label for="app">APP</label><input type="text" id="app" required>
+            <label for="edu">EDU</label><input type="text" id="edu" required>
+        </form>
+
+        <section id="info">
+            <form id="basicInfo">
+                <label for="name">Name</label><input type="text" id="name" required>
+                <label for="age">Age</label><input type="number" id="age" required>
+                <label for="occupation">occupation</label><input type="text" id="occupation" required>
+                <label for="times">Times</label>
+                <select name="times" id="times">
+                    <option value="1920s">1920s</option>
+                    <option value="1980s">1980s</option>
+                    <option value="Modern">Modern</option>
+                    <option value="Future">Future</option>
+                    <option value="Others">Others</option>
+                </select>
+            </form>
+    
+            <label for="background">Character Background<textarea name="background" id="background" rows="10" cols="50"></textarea></label>
+        </section>
+        
+
+        <input type="submit" name="send" value="submit">
+    </main>
+
+    <footer>
+        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+        <a href="mailto:&#114;&#117;&#111;&#112;&#101;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">&#114;&#117;&#111;&#112;&#101;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a>
+    </footer>
+</body>
+
+</html>
