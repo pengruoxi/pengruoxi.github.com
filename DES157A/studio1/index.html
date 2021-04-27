@@ -6,50 +6,77 @@
     <title>Studio 1: Mad Libs!</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link href="berlin-sans-fb-cufonfonts-webfont/style.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>TRPG Character Form</h1>
+        <h1>TRPG Character</h1>
         <h2>Based on COC 7th</h2>
     </header>
 
     <main>
 
-        <img src="">
-        
-        <form id="primaryAttributes">
-            <label for="str">STR</label><input type="text" id="str" required>
-            <label for="con">CON</label><input type="text" id="con" required>
-            <label for="dex">DEX</label><input type="text" id="dex" required>
-            <label for="siz">SIZ</label><input type="text" id="siz" required>
-            <label for="int">INT</label><input type="text" id="int" required>
-            <label for="pow">POW</label><input type="text" id="pow" required>
-            <label for="app">APP</label><input type="text" id="app" required>
-            <label for="edu">EDU</label><input type="text" id="edu" required>
-        </form>
-
-        <section id="info">
-            <form id="basicInfo">
-                <label for="name">Name</label><input type="text" id="name" required>
-                <label for="age">Age</label><input type="number" id="age" required>
-                <label for="occupation">occupation</label><input type="text" id="occupation" required>
-                <label for="times">Times</label>
-                <select name="times" id="times">
-                    <option value="1920s">1920s</option>
-                    <option value="1980s">1980s</option>
-                    <option value="Modern">Modern</option>
-                    <option value="Future">Future</option>
-                    <option value="Others">Others</option>
-                </select>
-            </form>
+    <section>
+        <section id="one" class="page showing">
+            <section id="attributes">
+                <form id="primaryAttributes">
+                    <label for="str"><span>STR</span><input type="text" id="str" required></label>
+                    <label for="con"><span>CON</span><input type="text" id="con" required></label>
+                    <label for="dex"><span>DEX</span><input type="text" id="dex" required></label>
+                    <label for="siz"><span>SIZ</span><input type="text" id="siz" required></label>
+                    <label for="int"><span>INT</span><input type="text" id="int" required></label>
+                    <label for="pow"><span>POW</span><input type="text" id="pow" required></label>
+                    <label for="app"><span>APP</span><input type="text" id="app" required></label>
+                    <label for="edu"><span>EDU</span><input type="text" id="edu" required></label>
+                </form>
+                <input type="button" class="random" value="Roll!">
+            </section>
     
-            <label for="background">Character Background<textarea name="background" id="background" rows="10" cols="50"></textarea></label>
+            <section id="info">
+                <form id="basicInfo">
+                    <label for="name">Name</label><input type="text" id="name" required>
+                    <label for="age">Age</label><input type="number" id="age" required>
+                    <label for="occupation">Occupation</label><input type="text" id="occupation" required>
+                    <label for="times">Times</label>
+                    <select name="times" id="times">
+                        <option value="1920s">1920s</option>
+                        <option value="1980s">1980s</option>
+                        <option value="Modern">Modern</option>
+                        <option value="Future">Future</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </form>
+        
+                <label for="background">Character Background (Optional)<textarea name="background" id="background" rows="10" cols="50"></textarea></label>
+            </section>
+            
+            <input type="submit" class="towardTwo" value="Next">
         </section>
         
+        <section id="two" class="page hidden">
 
-        <input type="submit" name="send" value="submit">
+            <section>
+                <article>
+                    <h3>Primary Atrributes</h3>
+                    <p id="sc1"></p>
+                </article>
+
+                <article>
+                    <h3>Character Related</h3>
+                    <p id="sc2"></p>
+                </article>
+            </section>
+            <button class="towardOne">Previous</button>
+        </section>
+
+    </section>
+
+    <section id="imgContainer">
+        <h2>Character Icon</h2>
+    </section>
+
     </main>
 
     <footer>

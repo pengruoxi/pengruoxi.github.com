@@ -1,29 +1,194 @@
-#primaryAttributes{
+body {
+    width:80%;
+    max-width: 1366px;
+    min-width: 800px;
+    max-height: 768px;
+    margin: auto;
+    font-family: 'Berlin Sans FB';
+}
+
+header h1 {
+    font-size: 60px;
+    color:rgb(47, 47, 73);
+    line-height: 0ch;
+}
+
+header h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    color:rgb(47, 47, 73);
+    line-height: 0ch;
+    position: relative;
+    left: 300px;
+}
+
+p, a{
+    font-size: 16px;
+    margin: 10px;
+}
+
+#attributes{
     display: flex;
-    width:800px;
-    height:200px;
+}
+
+.page{
+    width: 920px;
+    height: 620px;
+}
+
+#primaryAttributes{
+    margin: 20px;
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    background-color: rgb(47, 47, 73);
+    border: 1px solid rgb(47, 47, 73);
+    border-radius: 15px;
+    vertical-align: middle;
 }
 
 #primaryAttributes input{
     width: 80px;
-    height: 40px;
+    height: 60px;
+    padding: 0;
+    border: 0;
+    border-right: 0.5px solid rgb(47, 47, 73);
+    border-left: 0.5px solid rgb(47, 47, 73);
+    color:rgb(47, 47, 73);
+    background-color: white;
+    text-align: center;
+    outline: none;
+}
+
+#str{
+    border-bottom-left-radius: 15px;
+}
+
+#edu{
+    border-bottom-right-radius: 15px;
 }
 
 #primaryAttributes label{
-    display: flex;
-}
-
-#basicInfo{
-    width: 400px;
+    font-size: 24px;
+    color: white;
     display: flex;
     flex-direction: column;
 }
 
+#primaryAttributes label span{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+input[type="button" i]{
+    font-size: 24px;
+    color:rgb(47, 47, 73);
+    padding-top: 30px;
+    padding-left: 64px;
+    height: fit-content;
+    position: relative;
+    right: 30px;
+    top: 120px;
+    background-image: url(image/dice.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    transition: all 0.5s;
+}
+
+input[type="button" i]:hover{
+    color:rgb(67, 67, 245);
+    background-image: url(image/dice2.png);
+}
+
+input[type="submit" i], button{
+    color:rgb(47, 47, 73);
+    font-size: 24px;
+    padding: 20px 40px;
+    position: relative;
+    left: 920px;
+    bottom: 30px;
+    background-color: white;
+    border:2px solid rgb(47, 47, 73);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+input[type="submit" i]:hover, button:hover{
+    color:white;
+    background-color: rgb(67, 67, 245);
+    border:2px solid rgb(67, 67, 245);
+}
+
 #info{
+    display: flex;
+    width: fit-content;
+    padding: 20px;
+}
+
+#basicInfo{
+    width: 350px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#info label{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#info input, select, textarea{
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    border: solid 2px rgb(47, 47, 73);
+    margin-bottom: 20px;
+}
+
+select{
+    height: 54px;
+}
+
+textarea{
+    height: 300px;
+}
+
+main{
     display: flex;
 }
 
-img{
-    width: 400px;
+
+#two article{
+    height: 280px;
+    margin: 20px, 5px;
+}
+
+#imgContainer{
     height: 560px;
+    width: 400px;
+    border: 2px solid rgb(47, 47, 73);
+    border-radius: 15px;
+}
+
+#imgContainer h2{
+    text-align: center;
+    position: relative;
+    top: 240px;
+}
+
+footer {
+    font-size: 10px;
+    padding:20px;
+    margin-top:70px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
 }
