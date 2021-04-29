@@ -28,6 +28,19 @@ p, a{
     margin: 10px;
 }
 
+a {
+    color:rgb(47, 47, 73);
+    text-decoration: none;
+}
+
+a:hover{
+    color:rgb(67, 67, 245);
+}
+
+footer a{
+    padding: 5px;
+}
+
 #attributes{
     display: flex;
 }
