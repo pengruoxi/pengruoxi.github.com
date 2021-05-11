@@ -2,17 +2,6 @@
     "use strict";
     console.log("reading js");
 
-    //choose img
-    const myImages = document.querySelectorAll("#one > img");
-
-    myImages.forEach(function (eachImg) {
-        eachImg.addEventListener('mouseover', function(){
-            eachImg.src=`image/${eachImg.id}-selected.png`;
-        });
-        eachImg.addEventListener('mouseout', function(){
-            eachImg.src=`image/${eachImg.id}.png`;
-        });
-    });
 
     //change page
 
