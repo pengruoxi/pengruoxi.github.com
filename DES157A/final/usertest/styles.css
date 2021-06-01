@@ -1,0 +1,422 @@
+body {
+    width:100vw;
+    max-width: 1366px;
+    min-width: 800px;
+    max-height: 768px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1366px;
+    min-width: 800px;
+    max-height: 768px;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*Drop down menu*/
+#menuContainer{
+    position: absolute;
+    text-align: center;
+    top:-250px;
+    width: 100vw;
+    overflow: hidden;
+    transition: top 500ms;
+    z-index: 3;
+}
+
+#menuContainer:hover{
+    top: 0;
+}
+
+#menu{
+    background-color: #404048;
+    height: 220px;
+    padding-top: 30px;
+}
+
+#menuContainer p{
+    color: #404048;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 25px;
+    transition: text-shadow 200ms;
+}
+
+#menu p:hover{
+    text-shadow: 0 0 10px;
+    cursor: pointer;
+}
+
+#menuContainer p:nth-child(1){
+    margin-top: 0;
+}
+
+#menu p{
+    color: white;
+}
+
+#arrowDown{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    border-style: solid;
+    border-width: 30px 30px 0 30px;
+    border-color: #404048 transparent transparent transparent;
+    padding: 20px 0;
+}
+
+/*Introduction page*/
+
+article {
+    margin: auto;
+    line-height: 1.5;
+    width: 40%;
+    font-size: 16px;
+    margin-top: 80px;
+}
+
+article span{
+    font-weight: bold;
+}
+
+#startgame, #quit, #back, #applyChange, #quitChange{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid #404048 2px;
+    color: #404048;
+    background-color: transparent;
+}
+
+#startgame:hover, #quit:hover, #back:hover, #applyChange:hover, #quitChange:hover{
+    background-color: #404048;
+    color:white;
+    transition: all 300ms;
+}
+
+#introduction {
+    z-index: 5;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+#introduction h1{
+    font-size: 60px;
+}
+
+/*Player name and color*/
+
+#colorChoosing{
+    position: absolute;
+    z-index: 6;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    bottom: 20px;
+}
+
+#colorChoosing p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input{
+    border: 0;
+    font-weight: bold;
+    background-color: transparent;
+    border-bottom: 2px solid #404048;
+    outline: none;
+    width: 250px;
+    text-align: center;
+}
+
+.colorScheme{
+    display: flex;
+    justify-content: center;
+}
+
+.colorScheme div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    margin: 0 10px;
+    transition: border 200ms;
+}
+
+#change{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#change button{
+    width: 100px;
+    margin: 0 20px;
+}
+
+#colorChoosingInGame{
+    position: absolute;
+    z-index: 6;
+    width: fit-content;
+    justify-content: space-around;
+    left: 32vw;
+    top: 200px;
+    background-color: white;
+    border-radius: 15px;
+    border:5px solid #404048;
+    padding: 30px;
+}
+
+/*Colors for P1*/
+#p1Color div:nth-child(1){
+    background-color: #a3cdd9;
+    border-color: #404048;
+}
+
+#p1Color div:nth-child(2){
+    background-color: #f2cc39;
+}
+
+#p1Color div:nth-child(3){
+    background-color: #50ccd4;
+}
+
+/*Colors for P2*/
+#p2Color div:nth-child(1){
+    background-color: #8c4660;
+    border-color: #404048;
+}
+
+#p2Color div:nth-child(2){
+    background-color: #7988d9;
+}
+
+#p2Color div:nth-child(3){
+    background-color: #f2aeae;
+}
+
+
+/*Game related*/
+#mainArea{
+    height: 100vh;
+}
+
+#buildingArea {
+    height: 60vh;
+}
+
+#gameProcess {
+    display: flex;
+    height: 40vh;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#pl1 h1{
+    padding-left: 15px;
+    border-left: solid 20px #8ac37f;
+}
+
+#pl2 h1{
+    text-align: right;
+    padding-right: 15px;
+    border-right: solid 20px #809bc3;
+}
+
+    
+
+
+#overlay {
+    position: absolute;
+    padding: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.466);
+    z-index: 1;
+}
+
+#gameProcess button { 
+    padding: 5px 20px;
+    border-style: none;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:#404048;
+    background: transparent;
+    z-index: 2;
+}
+
+#roll:hover, #rollagain:hover{
+    background-color: #8ac37f;
+    transition: background-color 200ms;
+}
+
+#pass:hover{
+    background-color: #e05b5b;
+    transition: background-color 200ms;
+}
+
+.player{
+    width: 50%;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    margin-top: 85px;
+}
+
+.game {
+    display: flex;
+}
+
+.container{
+    height: 150px;
+    margin: 0 50px;
+}
+
+#pl1 .game{
+    justify-content: flex-start;
+}
+
+#pl2 .game{
+    justify-content: flex-end;
+}
+
+.score {
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+}
+
+#pl1 .score{
+    border: solid 15px #8ac37f;
+    color: #8ac37f;
+}
+
+#pl2 .score{
+    border: solid 15px #809bc3;
+    color: #809bc3;
+}
+
+.score p{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 25px;
+}
+
+.score span{
+    font-size: 30px;
+}
+
+.left {
+    position: relative;
+    width: 75px;
+    height: 150px;
+    bottom: 150px;
+    overflow: hidden;
+}
+
+
+.circleL{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: solid 15px transparent;
+    border-top: 15px solid #404048;
+    border-right: 15px solid #404048;
+    border-radius: 50%;
+    transform: rotate(-135deg);
+    transition: transform 500ms linear;
+}
+
+.circleR{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    right: 75px;
+    border: solid 15px transparent;
+    border-bottom: 15px solid #404048;
+    border-left: 15px solid #404048;
+    border-radius: 50%;
+    transform: rotate(-135deg);
+    transition: transform 500ms linear;
+}
+
+.right {
+    position: relative;
+    left: 75px;
+    width: 75px;
+    height: 150px;
+    bottom: 300px;
+    overflow: hidden;
+}
+
+#diceArea{
+    margin: auto;
+    width: fit-content;
+    margin-top: 300px;
+}
+
+#dice{
+    margin: auto;
+    height: 114px;
+    width: fit-content;
+}
+
+#gameInfo {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+img{
+    padding: 5px;
+}
+
+footer {
+    position: absolute;
+    font-size: 12px;
+    bottom: 10px;
+    right: 20px;
+    z-index: 3;
+}
+
+footer a{
+    text-decoration: none;
+    color:#404048;
+    margin: 10px;
+}
+
+footer a:hover{
+    color: rgb(6, 56, 148);
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
