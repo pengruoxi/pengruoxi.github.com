@@ -1,0 +1,59 @@
+body {
+    width:80%;
+    max-width: 1366px;
+    min-width: 800px;
+    margin: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #404048;
+}
+
+
+
+section article {
+    padding:40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+section {
+    padding-left: 40px;
+    margin-top: 50px;
+    border-left: 2px solid #404048;
+}
+
+
+#space {
+    padding-top: 100px;
+}
+
+
+a {
+    color: #404048;
+}
+a:hover{
+    color:rgb(67, 67, 245);
+}
+
+figcaption a{
+    text-decoration: none;
+}
+
+footer a{
+    padding: 5px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p{
+    width: 450px;
+    line-height: 1.5em;
+}
+
+footer {
+    font-size: 10px;
+    padding:20px;
+    margin:auto;
+    text-align: center;
+}
